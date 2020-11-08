@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+{% block content_body %}
+<div class="container">
+	<h1>Total Yearly Growth</h1>
+		<p style="font-size:18px">
+		To quantify the increase seen previously we now directly examine the amount the sales grew each year.
+		Normally when one considers the growth of a market one considers the precent the total sales grew each year.
+		Since we are still in the middle of 2020 we instead will look at the cummulative sales as a function of day of the year.
+		</p>
+		<figure class="half">
+			<table>
+			 <tr>
+			  <td>
+				<img src="/static/sale_cum.png"/>
+			  </td>
+			  <td>
+				<img src="/static/vol_cum.png"/>
+			  </td>
+			 </tr>
+			</table>
+			<!-- <figcaption>Caption describing these two images.</figcaption> -->
+		</figure>
+		<p style="font-size:18px">
+		At this point we can clearly see how the total amount of sales increases each year.
+		How do we quantify this growth?
+		The easiest way to do this is assume a consistent precentage growth each year and see how well this model works.
+		We choose day 270 (Septempber 26th, 27th for leap years) since it is close to the last avaliable data point for the current year
+		and try to fit the years 2012-2019 to constant present growth and see how 2020 compares.
+		</p>
+		<figure class="half">
+			<table>
+			 <tr>
+			  <td>
+				<img src="/static/sale_log_fit.png"/>
+			  </td>
+			  <td>
+				<img src="/static/vol_log_fit.png"/>
+			  </td>
+			 </tr>
+			</table>
+			<!-- <figcaption>Caption describing these two images.</figcaption> -->
+		</figure>
+		<p style="font-size:18px">
+		Above is a log plot of the data for day 270.
+		The line fits years 2012-2019 and indicates a growth rate of 5.1% each year for sales in dollars and 3.2% for volume sold.
+		Furthermore the fit works much better for the sales in dollars as opposed to volume sold.
+		This however fails to predict the result for 2020, which is a 13.0% increase for sales in and dollars and 8.0% for volume sold from 2019.
+		If we use the above fit to project the results for various years we can clearly see how it matches the data.
+		</p>
+		<figure class="half">
+			<table>
+			 <tr>
+			  <td>
+				<img src="/static/sale_proj.png"/>
+			  </td>
+			  <td>
+				<img src="/static/vol_proj.png"/>
+			  </td>
+			 </tr>
+			</table>
+			<!-- <figcaption>Caption describing these two images.</figcaption> -->
+		</figure>
+		<p style="font-size:18px">
+		As expected,the projection fails miserably for the year 2020 and works quite will for the other years.
+		In the above graph we show 2017 as an example.
+		Overall the exponential growth model works much better for sales in dollars as opposed to sales in volume.
+		Furthermore the sales in dollars grew more than volume sold.
+		In order to understand why this is the case we need to look more carefully at the individual sales.
+		</p>
+{% endblock content_body %}

@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+{% block content_body %}
+<div class="container">
+	<h1>Yearly Rolling Mean</h1>
+	    <p style="font-size:18px">
+		The first thing we will look at is how the sales (measured both in dollars and volume sold) change as a function of time from 2012 until the last avaliable data.
+		Since we are interested in long term trends we will look at a rolling mean, for now we choose a 90 day rolling mean.
+		First we plot the rolling mean from 2012 to the most recent data, September 30th, 2020.
+		</p>
+		<figure class="half">
+			<table>
+			 <tr>
+			  <td>
+				<img src="/static/sale_90day_total.png"/>
+			  </td>
+			  <td>
+				<img src="/static/vol_90day_total.png"/>
+			  </td>
+			 </tr>
+			</table>
+			<!-- <figcaption>Caption describing these two images.</figcaption> -->
+		</figure>
+		<p style="font-size:18px">
+		We can see that the amount sold changes as a function of time but tends to increase overall as we get to later years,
+		more obviously for the sales in dollars as opposed to the volume sold.
+		This hints at the fact that the overall sales grow each year, which is expected since markets tend to grow overtime.
+		To more clearly see this we now plot the same data but with respect to day of the year, each year having it's own line.
+		</p>
+		<figure class="half">
+			<table>
+			 <tr>
+			  <td>
+				<img src="/static/sale_90day.png"/>
+			  </td>
+			  <td>
+				<img src="/static/vol_90day.png"/>
+			  </td>
+			 </tr>
+			</table>
+			<!-- <figcaption>Caption describing these two images.</figcaption> -->
+		</figure>		
+		<p style="font-size:18px">
+		These plots seem a bit messy but the trends of interest are clear.
+		While, in general, the sales each day increase each year we see a large increase for the current year.
+		This seems to indicate that, overall, this year is special and has seen and abnormal amount of growth in sales.
+		To see this clearly we will need to look at other aspects of the data.
+		</p>
+{% endblock content_body %}
