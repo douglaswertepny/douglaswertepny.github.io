@@ -1,5 +1,80 @@
-{% extends 'layout.html' %}
-{% block content_body %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Toy application demoing useful tech.">
+    <meta name="author" content="@gotoariel">
+    <!-- <link rel="icon" href="favicon.ico"> -->
+
+    <title>Covid-19's Effect on Iowa Liquor Sales</title>
+
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom CSS for navbar-->
+    <style>
+    body {
+      padding-top: 70px;
+    }
+    </style>
+	{% block content_script %}{% endblock %}
+  </head>
+
+  <body>
+    <!-- navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-1">
+          <span class="sr-only">Toggle navigation</span>
+          </button>
+          <span class="navbar-brand">Covid-19's Effect on Iowa Liquor Sales</span>
+        </div>
+
+        <div class="collapse navbar-collapse" id="nav-1">
+          <ul class="nav navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="/rolling">Rolling Mean</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="/growth">Yearly Growth</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="/conclusions">Conclusions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/douglaswertepny">GitHub</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <!--
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            -->
+          </ul>
+          <!-- 
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          -->
+        </div>
+      </div>
+    </nav>
+
+<body>
 <div class="container">
 	<h1>Yearly Rolling Mean</h1>
 	    <p style="font-size:18px">
@@ -45,4 +120,4 @@
 		This seems to indicate that, overall, this year is special and has seen and abnormal amount of growth in sales.
 		To see this clearly we will need to look at other aspects of the data.
 		</p>
-{% endblock content_body %}
+</body>
