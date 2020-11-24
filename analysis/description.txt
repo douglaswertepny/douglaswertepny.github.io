@@ -1,0 +1,19 @@
+Here are the background codes that did the data analysis.
+
+There are ____ different files invovled with downloading and simplifying the data:
+
+1)
+
+2)
+
+There are three different files invovled directly with the data analysis:
+
+1) ewm_mean.py
+  This file computes the ewm mean and outputs the interactive altair plots.
+
+2) yearly_growth.py
+  This file calculates the yearly growth and outputs the graphs used on the yearly growth page.
+
+3) prices.py
+  This file does the price data analysis. The output are the altair interactive graphs.
+
